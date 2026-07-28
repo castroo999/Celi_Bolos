@@ -1,0 +1,13 @@
+.split-title {
+    display: block;
+}
+
+.split-word {
+    display: inline-block;
+    margin-right: 0.28em; 
+}
+
+.split-letter {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+}

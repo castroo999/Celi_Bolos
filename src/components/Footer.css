@@ -1,0 +1,151 @@
+.footer {
+    background: #4A2C2A;
+    color: white;
+    margin-top: 120px;
+}
+
+.footer-container {
+
+    width: min(1200px, 90%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding: 70px 0;
+}
+
+.footer-logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 18px;
+    transition:transform .35s ease;
+}
+
+.footer-logo:hover img {
+    transform:scale(1.08) rotate(-4deg);
+}
+
+.footer-logo h2 {
+    font-family: var(--font-title);
+    font-size: 36px;
+    color: #D4B26A;
+    margin-bottom: 18px;
+}
+
+.footer-logo p {
+    font-family: var(--font-text);
+    line-height: 1.8;
+    color: #ddd;
+    max-width: 300px;
+}
+
+.footer h3 {
+    font-family: var(--font-title);
+    color: #D4B26A;
+    margin-bottom: 22px;
+    font-size: 28px;
+}
+
+.footer-links,
+.footer-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color .3s ease, transform .3s ease;
+    font-family: var(--font-text);
+}
+
+.footer-links a:hover {
+    color: #D4B26A;
+    transform: translateX(5px);
+}
+
+.footer-contato div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ddd;
+    font-family: var(--font-text);
+}
+
+.icons {
+    display: flex;
+    gap: 18px;
+}
+
+.icons a {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #5B3734;
+
+    color: #D4B26A;
+
+    font-size: 22px;
+
+    transition: .35s;
+}
+
+.icons a:hover {
+
+    background: #D4B26A;
+    color: #4A2C2A;
+
+    transform: translateY(-5px);
+}
+
+@media (max-width: 900px){
+    .footer-container{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+    }
+}
+
+@media (max-width: 620px){
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+}
+
+.footer-bottom {
+
+    border-top: 1px solid rgba(212, 178, 106, .25);
+
+    width: min(1200px, 90%);
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 0;
+
+    font-family: var(--font-text);
+    color: #cfcfcf;
+}
+
+.footer-bottom span {
+    color: #D4B26A;
+}

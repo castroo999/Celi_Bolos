@@ -1,0 +1,143 @@
+.CTA {
+    width: 100%;
+    padding: 120px 20px;
+    background: #FAF7F2;
+}
+
+.CTA-container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.cta-stars {
+    display: flex;
+    gap: 6px;
+    transition: 30s ease;
+}
+
+.cta-stars svg{
+    transition: 0.2s ease;
+}
+
+.CTA-container h1 {
+    font-family: var(--font-title);
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1.15;
+    text-align: center;
+    color: #2B2B2B;
+}
+
+.CTA-card {
+    width: 900px;
+    min-height: 280px;
+    background: #4A2C2A;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .18);
+    transition: .35s;
+}
+
+.CTA-card:hover {
+    transform: translateY(-6px);
+}
+
+.CTA-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(130deg,
+            rgba(255, 255, 255, .08),
+            transparent 45%);
+    pointer-events: none;
+}
+
+.CTA-card::after {
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    right:-70px;
+    bottom:-90px;
+    border-radius:50%;
+    background:rgba(212,178,106,.24);
+    filter:blur(2px);
+    pointer-events:none;
+    animation:ctaGlow 5s ease-in-out infinite;
+}
+
+@keyframes ctaGlow{
+    0%,100%{
+        transform:scale(1);
+        opacity:.55;
+    }
+
+    50%{
+        transform:scale(1.18);
+        opacity:.85;
+    }
+}
+
+.text {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    z-index: 2;
+}
+
+.text p {
+    font-family: var(--font-text);
+    font-size: 24px;
+    line-height: 1.8;
+    text-align: center;
+    color: #fff;
+}
+
+.btn-orcamento {
+    border: none;
+    cursor: pointer;
+    background: #D4B26A;
+    color: #2B2B2B;
+    padding: 16px 40px;
+    border-radius: 999px;
+    font-family: var(--font-text);
+    font-size: 18px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-orcamento:hover {
+    background: #E3C784;
+    transform: translateY(-3px);
+}
+
+.cta-stars svg:hover{
+    transform: scale(1.5);
+}
+
+@media (max-width: 900px){
+    .CTA-container h1{
+        font-size:44px;
+    }
+
+    .CTA-card{
+        width:100%;
+        padding:42px 24px;
+    }
+
+    .text p{
+        font-size:20px;
+    }
+}

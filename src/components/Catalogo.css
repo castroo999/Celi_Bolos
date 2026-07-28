@@ -1,0 +1,146 @@
+.catalogo{
+    width:100%;
+    padding:100px 0;
+    background:#FAF7F2;
+}
+
+.catalogo h2{
+    text-align:center;
+    font-family:var(--font-title);
+    font-size:62px;
+    color:#4A2C2A;
+    margin-bottom:70px;
+}
+
+.catalogo-slide{
+    width:min(1200px,90%);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+}
+
+.catalogo-texto{
+    flex:1;
+}
+
+.catalogo-texto span{
+    color:#C9A04D;
+    letter-spacing:3px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.catalogo-texto h3{
+    margin-top:15px;
+    font-family:var(--font-title);
+    font-size:58px;
+    color:#4A2C2A;
+}
+
+.catalogo-texto p{
+    margin-top:25px;
+    font-size:19px;
+    line-height:1.8;
+    color:#666;
+}
+
+.catalogo-texto ul{
+    margin-top:35px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    list-style:none;
+    font-size:18px;
+    font-family:var(--font-text);
+    color:#4A2C2A;
+}
+
+.catalogo-texto li{
+    position:relative;
+    padding-left:26px;
+}
+
+.catalogo-texto li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:.72em;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#C9A04D;
+    box-shadow:0 0 0 5px rgba(201,160,77,.16);
+}
+
+.catalogo-texto .btn-orcamento{
+    margin-top:40px;
+    padding:16px 34px;
+    border:none;
+    border-radius:999px;
+    background:#C9A04D;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.catalogo-texto .btn-orcamento:hover{
+    transform:translateY(-4px);
+    background:#b3882f;
+
+}
+
+.catalogo-imagem{
+    flex:1;
+    display:flex;
+    justify-content:center;
+
+}
+
+.catalogo-imagem img{
+    width:100%;
+    max-width:520px;
+    height:620px;
+    object-fit:cover;
+    border-radius:30px;
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+    transition:transform .6s ease;
+
+}
+
+.catalogo-imagem:hover img{
+    transform:scale(1.035);
+}
+
+.swiper{
+    padding-bottom:60px;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    color:#C9A04D;
+    scale:.8;
+
+}
+
+@media (max-width: 900px){
+    .catalogo-slide{
+        flex-direction:column;
+        gap:45px;
+    }
+
+    .catalogo h2{
+        font-size:44px;
+    }
+
+    .catalogo-texto h3{
+        font-size:44px;
+    }
+
+    .catalogo-imagem img{
+        height:auto;
+        aspect-ratio:4 / 5;
+    }
+}
+
