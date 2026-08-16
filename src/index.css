@@ -50,6 +50,25 @@ button{
     text-decoration:none;
     min-height: 48px;
     touch-action: manipulation;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-orcamento::after,
+.orcamento::after {
+    content: "";
+    position: absolute;
+    inset: -40% auto -40% -60%;
+    width: 42%;
+    transform: rotate(18deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .42), transparent);
+    transition: left .65s ease;
+    pointer-events: none;
+}
+
+.btn-orcamento:hover::after,
+.orcamento:hover::after {
+    left: 120%;
 }
 
 /* Responsividade de fonte */
