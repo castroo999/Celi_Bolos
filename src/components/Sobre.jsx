@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Star, Heart } from "lucide-react";
 import SplitText from "../animações/SplitText";
 import Reveal from "../animações/Reveal";
-import celi from "../assets/celi.jpg";
+import celi from "../assets/celi.jpeg";
 import { celiWhatsappUrl } from "../utils/whatsapp";
 
 export default function Sobre() {

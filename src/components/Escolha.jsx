@@ -1,6 +1,6 @@
 import "./Escolha.css";
 import { motion } from "motion/react";
-import celi from "../assets/celi.jpg";
+import celi from "../assets/celi.jpeg";
 import Reveal from "../animações/Reveal";
 import SpotlightCard from "../animações/SpotlightCard";
 import { Star, Heart, Settings, Check } from "lucide-react";
