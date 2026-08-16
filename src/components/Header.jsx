@@ -8,13 +8,13 @@ import "./Header.css";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  function toggleMenu() {
+    setIsMenuOpen((current) => !current);
+  }
 
-  const closeMenu = () => {
+  function closeMenu() {
     setIsMenuOpen(false);
-  };
+  }
 
   return (
     <motion.header
@@ -29,7 +29,7 @@ export default function Header() {
           <h2>Celi Bolos e Doces</h2>
         </a>
 
-        <button 
+        <button
           className="menu-toggle"
           onClick={toggleMenu}
           aria-label="Menu"

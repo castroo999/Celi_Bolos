@@ -2,6 +2,8 @@ import "./Cta.css";
 import { motion } from "motion/react";
 import AnimatedStars from "../animações/AnimatedStars";
 import Reveal from "../animações/Reveal";
+import doces from "../assets/doces.webp";
+import boloPote from "../assets/bolo-pote.webp";
 import { celiWhatsappUrl } from "../utils/whatsapp";
 
 export default function CTA() {
@@ -40,6 +42,11 @@ export default function CTA() {
             >
               Fazer orçamento
             </a>
+          </div>
+
+          <div className="cta-preview" aria-hidden="true">
+            <img src={doces} alt="" />
+            <img src={boloPote} alt="" />
           </div>
         </motion.div>
       </div>

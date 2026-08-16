@@ -1,0 +1,29 @@
+import { motion } from "motion/react";
+import "./SpotlightCard.css";
+
+export default function SpotlightCard({
+  children,
+  className = "",
+  as = "div",
+  ...props
+}) {
+  const MotionTag = motion[as] || motion.div;
+
+  function handleMouseMove(event) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty("--spotlight-x", `${event.clientX - rect.left}px`);
+    event.currentTarget.style.setProperty("--spotlight-y", `${event.clientY - rect.top}px`);
+  }
+
+  return (
+    <MotionTag
+      className={`spotlight-card ${className}`}
+      onMouseMove={handleMouseMove}
+      whileHover={{ y: -8, scale: 1.01 }}
+      transition={{ duration: 0.28, ease: "easeOut" }}
+      {...props}
+    >
+      {children}
+    </MotionTag>
+  );
+}

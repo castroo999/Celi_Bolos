@@ -1,10 +1,12 @@
 import "./Categorias.css";
 import SplitText from "../animações/SplitText";
 import Reveal from "../animações/Reveal";
+import SpotlightCard from "../animações/SpotlightCard";
 import bolo1 from "../assets/bolo1.webp";
 import doces from "../assets/doces.webp";
 import boloPote from "../assets/bolo-pote.webp";
 
+// Lista usada para renderizar os cards. Para adicionar/remover categoria, mexa só aqui.
 const categorias = [
   {
     titulo: "Bolos",
@@ -36,15 +38,18 @@ export default function Categorias() {
       <div className="container">
         <div className="fotos">
           {categorias.map((categoria, index) => (
+            // Reveal controla a entrada ao rolar; SpotlightCard controla o brilho no hover.
             <Reveal
-              as="section"
-              className="categoria-item"
+              as="div"
+              className="categoria-reveal"
               delay={index * 0.14}
               key={categoria.titulo}
             >
-              <h3>{categoria.titulo}</h3>
-              <p>{categoria.texto}</p>
-              <img src={categoria.imagem} alt={categoria.alt} />
+              <SpotlightCard as="section" className="categoria-item">
+                <h3>{categoria.titulo}</h3>
+                <p>{categoria.texto}</p>
+                <img src={categoria.imagem} alt={categoria.alt} />
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>

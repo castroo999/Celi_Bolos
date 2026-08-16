@@ -1,8 +1,6 @@
 import "./Footer.css";
 import logo from "../assets/logo.jpg";
-
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
-
 import { Mail, MapPin } from "lucide-react";
 import { celiWhatsappUrl } from "../utils/whatsapp";
 
@@ -25,7 +23,7 @@ export default function Footer() {
           <a href="#catalogo">Catálogo</a>
           <a href="#categorias">Galeria</a>
           <a href="#sobre">Sobre</a>
-          <a href="#contato">Contato</a>
+          <a href="#redes-sociais">Contato</a>
         </div>
 
         <div className="footer-contato">

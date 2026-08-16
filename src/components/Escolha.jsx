@@ -2,9 +2,11 @@ import "./Escolha.css";
 import { motion } from "motion/react";
 import celi from "../assets/celi.jpg";
 import Reveal from "../animações/Reveal";
+import SpotlightCard from "../animações/SpotlightCard";
 import { Star, Heart, Settings, Check } from "lucide-react";
 import { celiWhatsappUrl } from "../utils/whatsapp";
 
+// Cards da seção de confiança. Altere texto/ícone aqui sem precisar mexer no JSX abaixo.
 const cards = [
   {
     titulo: "Feito com carinho",
@@ -53,7 +55,8 @@ export default function Escolha() {
 
       <div className="cards-escolhas">
         {cards.map((card, index) => (
-          <motion.div
+          // SpotlightCard dá o efeito de luz seguindo o mouse; o conteúdo continua simples.
+          <SpotlightCard
             className="card"
             key={card.titulo}
             initial={{ opacity: 0, y: 28, scale: 0.95 }}
@@ -61,10 +64,16 @@ export default function Escolha() {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ delay: index * 0.12, duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
           >
-            {card.icon}
+            <motion.div
+              className="card-icon"
+              whileHover={{ rotate: [0, -8, 8, 0], scale: 1.08 }}
+              transition={{ duration: 0.5 }}
+            >
+              {card.icon}
+            </motion.div>
             <h2>{card.titulo}</h2>
             <p>{card.texto}</p>
-          </motion.div>
+          </SpotlightCard>
         ))}
       </div>
 
