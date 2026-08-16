@@ -19,7 +19,7 @@
 
 .conheca h2{
     font-family:var(--font-title);
-    font-size:62px;
+    font-size: clamp(28px, 5vw, 62px);
     margin-top: -19px;
     font-weight:500;
     line-height:1.15;
@@ -28,7 +28,7 @@
 
 .conheca p{
     font-family:var(--font-text);
-    font-size:20px;
+    font-size: clamp(15px, 3vw, 20px);
     line-height:1.7;
     max-width:500px;
     color:#ececec;
@@ -55,9 +55,10 @@
 .redes-sociais a{
     text-decoration:none;
     color:#fff;
-    font-size:20px;
+    font-size: clamp(14px, 2.5vw, 20px);
     font-family:var(--font-text);
     transition:.3s;
+    word-break: break-word;
 }
 
 .redes-sociais a:hover{
@@ -78,18 +79,19 @@
 .icone-estrelas p {
     position: static;
     color: #D4B26A;
-    font-size: 17px;
+    font-size: clamp(14px, 2.5vw, 17px);
     text-align: end;
     font-style: italic;
 }
 
 .img-container{
-    width:50%;
+    width:60%;
     display:flex;
     justify-content:center;
     align-items:center;
     background:#ffff; 
     padding:50px;
+    box-sizing: border-box;
 }
 
 .img-container img{
@@ -106,9 +108,33 @@
     transform:scale(1.035);
 }
 
+/* Tablet Grande */
+@media (max-width: 1200px) {
+    .conheca-container {
+        min-height: auto;
+    }
+
+    .conheca {
+        width: 45%;
+        padding: 70px 60px;
+    }
+
+    .img-container {
+        width: 55%;
+        padding: 40px;
+    }
+
+    .img-container img {
+        height: 600px;
+    }
+}
+
+/* Tablet */
 @media (max-width: 1000px){
     .conheca-container{
         flex-direction:column;
+        border: none;
+        min-height: auto;
     }
 
     .conheca,
@@ -118,21 +144,93 @@
 
     .conheca{
         padding:70px 32px;
+        gap: 45px;
+    }
+
+    .img-container {
+        padding: 40px 20px;
+    }
+
+    .img-container img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+        max-width: 100%;
+    }
+
+    .conheca h2 {
+        font-size: clamp(24px, 5vw, 52px);
     }
 }
 
+/* Mobile */
 @media (max-width: 620px){
+    .conheca-container{
+        border: none;
+    }
+
+    .conheca{
+        padding: 50px 20px;
+        gap: 35px;
+    }
+
     .conheca h2{
-        font-size:44px;
+        font-size: clamp(20px, 5vw, 44px);
+        margin-top: 0;
+    }
+
+    .conheca p {
+        font-size: clamp(13px, 2.5vw, 18px);
+        max-width: 100%;
+    }
+
+    .redes-sociais{
+        gap:35px;
+    }
+
+    .redes-sociais div {
+        gap: 15px;
     }
 
     .redes-sociais a{
-        font-size:17px;
+        font-size: clamp(13px, 2.3vw, 16px);
         overflow-wrap:anywhere;
+    }
+
+    .img-container{
+        padding:30px 16px;
     }
 
     .img-container img{
         height:auto;
         aspect-ratio:4 / 5;
+        border-radius: 15px;
+    }
+
+    .icone-estrelas p {
+        font-size: clamp(12px, 2.2vw, 15px);
+    }
+}
+
+/* Ultra Mobile */
+@media (max-width: 380px) {
+    .conheca {
+        padding: 40px 16px;
+        gap: 25px;
+    }
+
+    .redes-sociais {
+        gap: 25px;
+    }
+
+    .redes-sociais div {
+        gap: 12px;
+    }
+
+    .img-container {
+        padding: 20px 12px;
+    }
+
+    .conheca h2 {
+        font-size: clamp(18px, 4vw, 32px);
     }
 }

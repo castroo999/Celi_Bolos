@@ -7,7 +7,7 @@
 .categorias {
     padding-bottom: 55px;
     text-align: center;
-    font-size: 62px;
+    font-size: clamp(32px, 7vw, 62px);
     color: #C9A04D;
     font-family: var(--font-title);
 }
@@ -62,7 +62,7 @@
 }
 
 .categoria-item h3 {
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px);
     color: #C9A04D;
     font-family: var(--font-text);
     font-weight: 700;
@@ -70,9 +70,109 @@
 }
 
 .categoria-item p {
-    font-size: 17px;
+    font-size: clamp(14px, 2.5vw, 17px);
     line-height: 1.7;
     color: #D8C29A;
     font-family: var(--font-text);
     max-width: 280px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .categorias-container {
+        padding: 60px 20px;
+    }
+
+    .fotos {
+        gap: 28px;
+    }
+
+    .categoria-item {
+        flex: 1 1 250px;
+        max-width: 300px;
+    }
+
+    .categoria-item img {
+        height: 280px;
+    }
+}
+
+/* Tablet Pequeno */
+@media (max-width: 900px) {
+    .categorias-container {
+        padding: 50px 16px;
+    }
+
+    .fotos {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .categoria-item {
+        flex: 1 1 200px;
+        max-width: 280px;
+        padding: 14px;
+    }
+
+    .categoria-item img {
+        height: 250px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .categorias-container {
+        padding: 40px 12px;
+    }
+
+    .categorias {
+        padding-bottom: 40px;
+        font-size: clamp(24px, 6vw, 44px);
+    }
+
+    .fotos {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .categoria-item {
+        width: 100%;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .categoria-item img {
+        height: 220px;
+    }
+
+    .categoria-item h3 {
+        font-size: clamp(18px, 4vw, 24px);
+    }
+
+    .categoria-item p {
+        font-size: clamp(13px, 2.3vw, 15px);
+        max-width: 100%;
+    }
+}
+
+/* Ultra Mobile */
+@media (max-width: 380px) {
+    .categorias-container {
+        padding: 30px 10px;
+    }
+
+    .categorias {
+        padding-bottom: 30px;
+        font-size: clamp(20px, 5vw, 32px);
+    }
+
+    .categoria-item {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .categoria-item img {
+        height: 180px;
+    }
 }

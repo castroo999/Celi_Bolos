@@ -19,7 +19,7 @@
 
 .escolha h1{
     font-family:var(--font-title);
-    font-size:64px;
+    font-size: clamp(32px, 7vw, 64px);
     line-height:1.18;
     font-weight:500;
     margin-bottom:30px;
@@ -28,7 +28,7 @@
 
 .escolha p{
     font-family: var(--font-text);
-    font-size:20px;
+    font-size: clamp(15px, 3vw, 20px);
     line-height:1.7;
     color:#2b2b2b;
     max-width:430px;
@@ -75,6 +75,7 @@
     font-weight:700;
     cursor:pointer;
     transition:.25s ease;
+    min-height: 48px;
 }
 
 .btn-orcamento:hover{
@@ -115,7 +116,7 @@
 
 .card h2{
     font-family:var(--font-text);
-    font-size:24px;
+    font-size: clamp(18px, 3vw, 24px);
     font-weight:600;
     color:#fff;
     margin-bottom:18px;
@@ -125,9 +126,22 @@
     font-family:var(--font-text);
     color:#fff;
     line-height:1.7;
-    font-size:19px;
+    font-size: clamp(15px, 2.5vw, 19px);
 }
 
+/* Tablet Grande */
+@media (max-width: 1200px) {
+    .escolha-container {
+        gap: 60px;
+        margin: 60px auto;
+    }
+
+    .cards-escolhas {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Tablet */
 @media (max-width: 1000px){
     .escolha-container{
         grid-template-columns:1fr;
@@ -136,23 +150,87 @@
             "cards"
             "botao";
         gap:50px;
+        margin: 50px auto;
     }
 
     .cards-escolhas{
         grid-template-columns:repeat(2, minmax(0, 1fr));
     }
+
+    .escolha h1 {
+        font-size: clamp(28px, 6vw, 56px);
+    }
+
+    .escolha-container .img img {
+        height: 350px;
+    }
 }
 
+/* Mobile */
 @media (max-width: 620px){
+    .escolha-container {
+        margin: 40px auto;
+        padding: 0 16px;
+        gap: 30px;
+    }
+
     .escolha h1{
-        font-size:44px;
+        font-size: clamp(22px, 5vw, 44px);
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
     .escolha p{
-        font-size:18px;
+        font-size: clamp(13px, 2.5vw, 18px);
+        max-width: 100%;
+        margin-bottom: 25px;
     }
 
     .cards-escolhas{
         grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .escolha-container .img img {
+        height: 280px;
+    }
+
+    .card {
+        min-height: 200px;
+        padding: 20px 16px;
+    }
+
+    .card h2 {
+        font-size: clamp(16px, 3vw, 22px);
+    }
+
+    .card p {
+        font-size: clamp(13px, 2.2vw, 17px);
+    }
+
+    .btn-orcamento {
+        margin-bottom: 60px;
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+}
+
+/* Ultra Mobile */
+@media (max-width: 380px) {
+    .escolha-container {
+        padding: 0 12px;
+    }
+
+    .escolha h1 {
+        font-size: clamp(20px, 4vw, 32px);
+    }
+
+    .card {
+        padding: 16px 12px;
+    }
+
+    .escolha-container .img img {
+        height: 240px;
     }
 }

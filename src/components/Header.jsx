@@ -1,9 +1,21 @@
-import "./Header.css";
+import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
+import { useState } from "react";
 import logo from "../assets/logo.jpg";
 import { celiWhatsappUrl } from "../utils/whatsapp";
+import "./Header.css";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <motion.header
       className="header"
@@ -17,18 +29,28 @@ export default function Header() {
           <h2>Celi Bolos e Doces</h2>
         </a>
 
-        <nav>
-          <a href="#inicio">Início</a>
-          <a href="#catalogo">Catálogo</a>
-          <a href="#categorias">Galeria</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#redes-sociais">Contato</a>
+        <button 
+          className="menu-toggle"
+          onClick={toggleMenu}
+          aria-label="Menu"
+          aria-expanded={isMenuOpen}
+        >
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        <nav className={`nav ${isMenuOpen ? "active" : ""}`}>
+          <a href="#inicio" onClick={closeMenu}>Início</a>
+          <a href="#catalogo" onClick={closeMenu}>Catálogo</a>
+          <a href="#categorias" onClick={closeMenu}>Galeria</a>
+          <a href="#sobre" onClick={closeMenu}>Sobre</a>
+          <a href="#redes-sociais" onClick={closeMenu}>Contato</a>
 
           <a
             className="orcamento"
             href={celiWhatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={closeMenu}
           >
             Fazer orçamento
           </a>

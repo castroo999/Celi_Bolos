@@ -23,6 +23,7 @@ body{
     color:var(--text);
     font-family:var(--font-text);
     overflow-x:hidden;
+    font-size: 16px;
 }
 
 #root{
@@ -32,10 +33,13 @@ body{
 img{
     max-width:100%;
     display:block;
+    height: auto;
 }
 
 button{
     font-family:inherit;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-orcamento,
@@ -44,6 +48,33 @@ button{
     align-items:center;
     justify-content:center;
     text-decoration:none;
+    min-height: 48px;
+    touch-action: manipulation;
+}
+
+/* Responsividade de fonte */
+@media (max-width: 900px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1, h2, h3 {
+        word-break: break-word;
+    }
+}
+
+/* Melhorias de acessibilidade mobile */
+@media (hover: none) {
+    button, a {
+        min-height: 48px;
+        min-width: 48px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce){

@@ -5,17 +5,13 @@
 }
 
 .footer-container {
-
     width: min(1200px, 90%);
     margin: auto;
 
     display: grid;
-    grid-template-columns:
-        2fr 1fr 1fr 1fr;
-
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 60px;
-
-    padding: 70px 0;
+    padding: 70px 20px;
 }
 
 .footer-logo img {
@@ -24,16 +20,16 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 18px;
-    transition:transform .35s ease;
+    transition: transform .35s ease;
 }
 
 .footer-logo:hover img {
-    transform:scale(1.08) rotate(-4deg);
+    transform: scale(1.08) rotate(-4deg);
 }
 
 .footer-logo h2 {
     font-family: var(--font-title);
-    font-size: 36px;
+    font-size: clamp(24px, 4vw, 36px);
     color: #D4B26A;
     margin-bottom: 18px;
 }
@@ -43,13 +39,14 @@
     line-height: 1.8;
     color: #ddd;
     max-width: 300px;
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 
 .footer h3 {
     font-family: var(--font-title);
     color: #D4B26A;
     margin-bottom: 22px;
-    font-size: 28px;
+    font-size: clamp(20px, 3vw, 28px);
 }
 
 .footer-links,
@@ -64,6 +61,7 @@
     text-decoration: none;
     transition: color .3s ease, transform .3s ease;
     font-family: var(--font-text);
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 
 .footer-links a:hover {
@@ -77,75 +75,160 @@
     gap: 10px;
     color: #ddd;
     font-family: var(--font-text);
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 
 .icons {
     display: flex;
     gap: 18px;
+    flex-wrap: wrap;
 }
 
 .icons a {
     width: 48px;
     height: 48px;
-
+    min-width: 48px;
+    min-height: 48px;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: #5B3734;
-
     color: #D4B26A;
-
     font-size: 22px;
-
     transition: .35s;
+    touch-action: manipulation;
 }
 
 .icons a:hover {
-
     background: #D4B26A;
     color: #4A2C2A;
-
     transform: translateY(-5px);
 }
 
-@media (max-width: 900px){
-    .footer-container{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-bottom{
-        flex-direction:column;
-        gap:12px;
-        text-align:center;
-    }
-}
-
-@media (max-width: 620px){
-    .footer-container{
-        grid-template-columns:1fr;
-    }
-}
-
 .footer-bottom {
-
     border-top: 1px solid rgba(212, 178, 106, .25);
-
     width: min(1200px, 90%);
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 30px 0;
-
+    padding: 30px 20px;
     font-family: var(--font-text);
     color: #cfcfcf;
+    font-size: clamp(12px, 2.2vw, 14px);
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-bottom span {
     color: #D4B26A;
+}
+
+/* Tablet Grande */
+@media (max-width: 1200px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        padding: 60px 20px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px){
+    .footer-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 50px 16px;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 24px 16px;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px){
+    .footer-container{
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 12px;
+    }
+
+    .footer-logo {
+        grid-column: auto;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-logo p {
+        max-width: 100%;
+    }
+
+    .footer h3 {
+        font-size: clamp(18px, 3vw, 24px);
+    }
+
+    .footer-links,
+    .footer-contato {
+        gap: 12px;
+    }
+
+    .footer-links a,
+    .footer-contato div {
+        font-size: clamp(12px, 2.2vw, 14px);
+    }
+
+    .icons {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        padding: 20px 12px;
+        font-size: clamp(11px, 2vw, 13px);
+        gap: 12px;
+    }
+}
+
+/* Ultra Mobile */
+@media (max-width: 380px) {
+    .footer-container {
+        padding: 30px 10px;
+        gap: 24px;
+    }
+
+    .footer-logo h2 {
+        font-size: clamp(20px, 3.5vw, 28px);
+    }
+
+    .footer h3 {
+        font-size: clamp(16px, 2.8vw, 20px);
+    }
+
+    .icons a {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        padding: 16px 10px;
+    }
 }
