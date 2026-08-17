@@ -5,9 +5,9 @@ export default function SplitText({
   text,
   className = "",
   tag = "h1",
-  delay = 0.03,
-  duration = 0.6,
-   delayStart = 0,
+  delay = 0.012,
+  duration = 0.48,
+  delayStart = 0,
 }) {
   const Tag = tag;
   const words = text.split(" ");
@@ -17,29 +17,29 @@ export default function SplitText({
   return (
     <Tag className={`split-title ${className}`}>
       {words.map((word, wordIndex) => (
-        <span className="split-word" key={wordIndex}>
+        <span className="split-word" key={`${word}-${wordIndex}`}>
           {word.split("").map((letter, letterIndex) => {
             const currentIndex = index++;
 
             return (
               <motion.span
-                key={letterIndex}
+                key={`${letter}-${letterIndex}`}
                 className="split-letter"
                 initial={{
                   opacity: 0,
-                  y: 45,
-                  filter: "blur(8px)",
+                  y: 14,
+                  filter: "blur(3px)",
                 }}
                 whileInView={{
                   opacity: 1,
                   y: 0,
                   filter: "blur(0px)",
                 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-8% 0px" }}
                 transition={{
                   duration,
                   delay: delayStart + currentIndex * delay,
-                  ease: "easeOut",
+                  ease: [0.22, 1, 0.36, 1],
                 }}
               >
                 {letter}

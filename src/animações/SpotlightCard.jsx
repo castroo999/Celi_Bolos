@@ -19,8 +19,8 @@ export default function SpotlightCard({
     <MotionTag
       className={`spotlight-card ${className}`}
       onMouseMove={handleMouseMove}
-      whileHover={{ y: -8, scale: 1.01 }}
-      transition={{ duration: 0.28, ease: "easeOut" }}
+      whileHover={{ y: -4, scale: 1.004 }}
+      transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
       {...props}
     >
       {children}

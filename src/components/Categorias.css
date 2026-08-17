@@ -46,13 +46,13 @@
     padding: 18px;
     overflow: hidden;
     background: rgba(255, 250, 244, .04);
-    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    transition: transform .42s ease, border-color .42s ease, box-shadow .42s ease;
 }
 
 .categoria-item:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-4px) scale(1.005);
     border-color: #D4B26A;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, .18);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .14);
 }
 
 .categoria-item img {
@@ -60,12 +60,12 @@
     height: 320px;
     object-fit: cover;
     border-radius: 16px;
-    transition: transform .45s ease;
+    transition: transform .55s ease;
     order: -1;
 }
 
 .categoria-item:hover img {
-    transform: scale(1.08);
+    transform: scale(1.025);
 }
 
 .categoria-item h3 {

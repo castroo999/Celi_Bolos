@@ -144,9 +144,9 @@
 
 .btn-orcamento:hover,
 .btn-catalogo:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     background: #c79c45;
-    box-shadow: 0 14px 26px rgba(90, 49, 45, .18);
+    box-shadow: 0 10px 22px rgba(90, 49, 45, .14);
 }
 
 .hero-image {
@@ -172,7 +172,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
-    animation: heroFloat 6s ease-in-out infinite;
+    animation: heroFloat 8s ease-in-out infinite;
 }
 
 .hero-chip {
@@ -182,8 +182,8 @@
     border: 8px solid #fffaf4;
     border-radius: 26px;
     overflow: hidden;
-    box-shadow: 0 18px 40px rgba(74, 44, 42, .22);
-    animation: chipFloat 5.6s ease-in-out infinite;
+    box-shadow: 0 14px 32px rgba(74, 44, 42, .18);
+    animation: chipFloat 7s ease-in-out infinite;
 }
 
 .hero-chip img {
@@ -205,21 +205,21 @@
 
 @keyframes chipFloat {
     0%, 100% {
-        transform: translateY(0) rotate(-3deg);
+        transform: translateY(0) rotate(-2deg);
     }
 
     50% {
-        transform: translateY(-14px) rotate(3deg);
+        transform: translateY(-7px) rotate(2deg);
     }
 }
 
 @keyframes heroFloat {
     0%, 100% {
-        transform: scale(1.02) translateY(0);
+        transform: scale(1.01) translateY(0);
     }
 
     50% {
-        transform: scale(1.05) translateY(-10px);
+        transform: scale(1.025) translateY(-5px);
     }
 }
 

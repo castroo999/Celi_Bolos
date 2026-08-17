@@ -61,8 +61,8 @@ button{
     inset: -40% auto -40% -60%;
     width: 42%;
     transform: rotate(18deg);
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .42), transparent);
-    transition: left .65s ease;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .28), transparent);
+    transition: left .85s ease;
     pointer-events: none;
 }
 

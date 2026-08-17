@@ -59,15 +59,15 @@ export default function Escolha() {
           <SpotlightCard
             className="card"
             key={card.titulo}
-            initial={{ opacity: 0, y: 28, scale: 0.95 }}
+            initial={{ opacity: 0, y: 14, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.35 }}
-            transition={{ delay: index * 0.12, duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: index * 0.08, duration: 0.48, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.div
               className="card-icon"
-              whileHover={{ rotate: [0, -8, 8, 0], scale: 1.08 }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.04 }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             >
               {card.icon}
             </motion.div>

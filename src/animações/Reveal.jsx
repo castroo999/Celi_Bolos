@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 
 const directions = {
-  up: { y: 34, x: 0 },
-  down: { y: -28, x: 0 },
-  left: { x: 34, y: 0 },
-  right: { x: -34, y: 0 },
+  up: { y: 18, x: 0 },
+  down: { y: -14, x: 0 },
+  left: { x: 18, y: 0 },
+  right: { x: -18, y: 0 },
 };
 
 export default function Reveal({
@@ -22,10 +22,10 @@ export default function Reveal({
     <MotionTag
       className={className}
       {...props}
-      initial={{ opacity: 0, ...offset, filter: "blur(8px)" }}
+      initial={{ opacity: 0, ...offset, filter: "blur(3px)" }}
       whileInView={{ opacity: 1, x: 0, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, amount: 0.24 }}
-      transition={{ duration: 0.75, delay, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, amount: 0.22, margin: "-6% 0px" }}
+      transition={{ duration: 0.62, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </MotionTag>

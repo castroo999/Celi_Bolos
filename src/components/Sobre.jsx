@@ -57,10 +57,10 @@ export default function Sobre() {
             <motion.div
               className={index === 1 ? "tempo" : index === 2 ? "artesanal" : "estrelas"}
               key={item.label}
-              initial={{ opacity: 0, y: 22, scale: 0.95 }}
+              initial={{ opacity: 0, y: 12, scale: 0.98 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.4 }}
-              transition={{ delay: index * 0.14, duration: 0.55, ease: "easeOut" }}
+              transition={{ delay: index * 0.08, duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
             >
               {item.icon}
               <p>
@@ -79,10 +79,10 @@ export default function Sobre() {
             href={celiWhatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 22 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.42, duration: 0.55, ease: "easeOut" }}
+            transition={{ delay: 0.24, duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
           >
             Fazer orçamento
           </motion.a>

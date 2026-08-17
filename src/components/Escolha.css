@@ -49,7 +49,7 @@
 }
 
 .escolha-container .img:hover img{
-    transform:scale(1.025);
+    transform:scale(1.012);
 }
 
 .cards-escolhas{
@@ -79,9 +79,9 @@
 }
 
 .btn-orcamento:hover{
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     background: #c79c45;
-    box-shadow: 0 14px 26px rgba(90, 49, 45, .18);
+    box-shadow: 0 10px 22px rgba(90, 49, 45, .14);
 }
 
 .card{
@@ -99,8 +99,8 @@
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 35px rgba(0,0,0,.18);
+    transform:translateY(-4px);
+    box-shadow:0 14px 28px rgba(0,0,0,.14);
     border-color:#D4B26A;
 }
 

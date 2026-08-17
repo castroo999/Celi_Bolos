@@ -54,7 +54,7 @@
 }
 
 .CTA-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-3px);
 }
 
 .CTA-card::before {
@@ -78,7 +78,7 @@
     background:rgba(212,178,106,.24);
     filter:blur(2px);
     pointer-events:none;
-    animation:ctaGlow 5s ease-in-out infinite;
+    animation:ctaGlow 7s ease-in-out infinite;
 }
 
 @keyframes ctaGlow{
@@ -88,8 +88,8 @@
     }
 
     50%{
-        transform:scale(1.18);
-        opacity:.85;
+        transform:scale(1.08);
+        opacity:.72;
     }
 }
 
@@ -131,15 +131,15 @@
 .cta-preview img:first-child {
     top: 0;
     left: 0;
-    transform: rotate(-8deg);
-    animation: ctaCardFloat 5s ease-in-out infinite;
+    transform: rotate(-5deg);
+    animation: ctaCardFloat 7s ease-in-out infinite;
 }
 
 .cta-preview img:last-child {
     right: 0;
     bottom: 0;
-    transform: rotate(7deg);
-    animation: ctaCardFloat 5s ease-in-out infinite reverse;
+    transform: rotate(5deg);
+    animation: ctaCardFloat 7s ease-in-out infinite reverse;
 }
 
 @keyframes ctaCardFloat {
@@ -148,7 +148,7 @@
     }
 
     50% {
-        translate: 0 -10px;
+        translate: 0 -5px;
     }
 }
 
@@ -169,11 +169,11 @@
 
 .btn-orcamento:hover {
     background: #E3C784;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .cta-stars svg:hover{
-    transform: scale(1.5);
+    transform: scale(1.16);
 }
 
 /* Tablet */

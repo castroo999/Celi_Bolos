@@ -15,21 +15,19 @@ export default function AnimatedStars({
           key={index}
           initial={{
             opacity: 0,
-            scale: 0,
-            rotate: -90,
-            y: 10,
+            scale: 0.86,
+            y: 4,
           }}
           whileInView={{
             opacity: 1,
             scale: 1,
-            rotate: 0,
             y: 0,
           }}
           viewport={{ once: true }}
           transition={{
-            delay: index * 0.12,
-            duration: 0.45,
-            ease: "easeOut",
+            delay: index * 0.07,
+            duration: 0.34,
+            ease: [0.22, 1, 0.36, 1],
           }}
         >
           <Star

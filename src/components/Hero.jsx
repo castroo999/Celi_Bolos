@@ -40,15 +40,15 @@ export default function Hero() {
           text="Bolos artesanais preparados com carinho para transformar aniversários, casamentos e celebrações em memórias inesquecíveis."
           tag="p"
           className="hero-description"
-          delayStart={1.1}
+          delayStart={0.45}
         />
 
         {/* Bloco de prova social com estrelas animadas. */}
         <motion.div
           className="avaliacao"
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.95, duration: 0.55, ease: "easeOut" }}
+          transition={{ delay: 0.82, duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="estrelas-hero">
             <AnimatedStars />
@@ -60,9 +60,9 @@ export default function Hero() {
         {/* Botões principais. O orçamento abre o WhatsApp definido em src/utils/whatsapp.js. */}
         <motion.div
           className="botoes"
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.12, duration: 0.55, ease: "easeOut" }}
+          transition={{ delay: 0.95, duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
         >
           <a
             className="btn-orcamento"
@@ -81,9 +81,9 @@ export default function Hero() {
       {/* Foto principal do hero. Os chips orbitais ficam posicionados pelo CSS. */}
       <motion.div
         className="hero-image"
-        initial={{ opacity: 0, scale: 0.92, rotate: -2, y: 30 }}
+        initial={{ opacity: 0, scale: 0.97, y: 14 }}
         animate={{ opacity: 1, scale: 1, rotate: 0, y: 0 }}
-        transition={{ delay: 0.35, duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ delay: 0.24, duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
       >
         <img src={heroImage} alt="Bolo artesanal decorado da Celi Bolos" />
 
@@ -91,9 +91,9 @@ export default function Hero() {
           <motion.div
             className={image.className}
             key={image.alt}
-            initial={{ opacity: 0, scale: 0.7, y: 24 }}
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ delay: 0.9 + index * 0.16, duration: 0.65, ease: "easeOut" }}
+            transition={{ delay: 0.58 + index * 0.1, duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
           >
             <img src={image.src} alt={image.alt} />
           </motion.div>

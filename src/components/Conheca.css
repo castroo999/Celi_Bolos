@@ -49,7 +49,7 @@
 }
 
 .redes-sociais div:hover{
-    transform:translateX(8px);
+    transform:translateX(4px);
 }
 
 .redes-sociais a{
@@ -105,7 +105,7 @@
 }
 
 .img-container:hover img{
-    transform:scale(1.035);
+    transform:scale(1.012);
 }
 
 /* Tablet Grande */

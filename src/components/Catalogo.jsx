@@ -61,10 +61,10 @@ export default function Catalogo() {
             <div className="catalogo-slide">
               <motion.div
                 className="catalogo-texto"
-                initial={{ opacity: 0, x: -28 }}
+                initial={{ opacity: 0, x: -16 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
               >
                 <span>CATEGORIA</span>
                 <h3>{produto.titulo}</h3>
@@ -88,10 +88,10 @@ export default function Catalogo() {
 
               <motion.div
                 className="catalogo-imagem"
-                initial={{ opacity: 0, scale: 0.94, x: 28 }}
+                initial={{ opacity: 0, scale: 0.98, x: 16 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
               >
                 <img src={produto.imagem} alt={produto.titulo} />
               </motion.div>
