@@ -4,6 +4,19 @@ import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { Mail, MapPin } from "lucide-react";
 import { celiWhatsappUrl } from "../utils/whatsapp";
 
+// Endereco usado tanto no texto do footer quanto nos links do Google Maps.
+// Se a Celi mudar de local, altere aqui e os links do mapa acompanham.
+const celiAddress =
+  "Rua Vereador Antonio Modena, 676 - Recanto das Rosas, Cerquilho - SP";
+
+const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  celiAddress,
+)}`;
+
+const googleMapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(
+  celiAddress,
+)}&output=embed`;
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -36,7 +49,7 @@ export default function Footer() {
 
           <div>
             <MapPin size={18} />
-            <span>Cerquilho - SP</span>
+            <span>{celiAddress}</span>
           </div>
         </div>
 
@@ -73,6 +86,36 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <section className="footer-map" aria-labelledby="footer-map-title">
+        <div className="footer-map-info">
+          <span className="footer-map-kicker">Venha conhecer</span>
+
+          <h3 id="footer-map-title">Onde fica a Celi</h3>
+
+          <p>{celiAddress}</p>
+
+          <a
+            className="footer-map-button"
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir rota no Google Maps
+          </a>
+        </div>
+
+        {/* Iframe oficial do Google Maps sem precisar de chave de API. */}
+        <div className="footer-map-frame">
+          <iframe
+            title="Mapa da Celi Bolos e Doces"
+            src={googleMapsEmbedUrl}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
 
       <div className="footer-bottom">
         <p>© 2026 Celi Bolos e Doces • Todos os direitos reservados</p>

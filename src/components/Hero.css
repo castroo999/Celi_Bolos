@@ -23,26 +23,9 @@
     z-index: -1;
 }
 
-.hero-ribbon {
-    position: absolute;
-    top: 42px;
-    left: 20px;
-    width: fit-content;
-    border: 1px solid rgba(90, 49, 45, .16);
-    border-radius: 999px;
-    padding: 9px 15px;
-    color: #7B4F3A;
-    background: rgba(255, 250, 244, .72);
-    backdrop-filter: blur(12px);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: .6px;
-}
-
 .hero-text {
     width: 520px;
     max-width: 100%;
-    padding-top: 52px;
 }
 
 .hero-title {
@@ -259,8 +242,7 @@
         padding: 60px 20px;
     }
 
-    .hero::before,
-    .hero-ribbon {
+    .hero::before {
         display: none;
     }
 

@@ -17,16 +17,6 @@ const orbitImages = [
 export default function Hero() {
   return (
     <section className="hero" id="inicio">
-      {/* Selo pequeno acima do título. A animação é só de entrada. */}
-      <motion.div
-        className="hero-ribbon"
-        initial={{ opacity: 0, y: -12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.55 }}
-      >
-        Artesanal • Cerquilho • Feito sob encomenda
-      </motion.div>
-
       <div className="hero-text">
         {/* SplitText anima letra por letra. Se quiser algo mais simples, troque por h1/p comuns. */}
         <SplitText

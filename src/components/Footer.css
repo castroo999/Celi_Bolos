@@ -106,6 +106,85 @@
     transform: translateY(-3px);
 }
 
+/* Area do mapa no footer.
+   Mantem o endereco facil de encontrar sem tirar o foco das redes e contatos. */
+.footer-map {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 0 20px 64px;
+    display: grid;
+    grid-template-columns: minmax(260px, .8fr) minmax(320px, 1.2fr);
+    gap: 36px;
+    align-items: stretch;
+}
+
+.footer-map-info {
+    border-top: 1px solid rgba(212, 178, 106, .35);
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-map-kicker {
+    color: #D4B26A;
+    font-family: var(--font-text);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.footer-map-info h3 {
+    margin-bottom: 16px;
+}
+
+.footer-map-info p {
+    color: #eee;
+    font-family: var(--font-text);
+    font-size: clamp(14px, 2.5vw, 16px);
+    line-height: 1.8;
+    max-width: 420px;
+    margin-bottom: 24px;
+}
+
+.footer-map-button {
+    width: fit-content;
+    border-radius: 999px;
+    background: #D4B26A;
+    color: #2b1716;
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 22px;
+    text-decoration: none;
+    transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.footer-map-button:hover {
+    background: #e0bf78;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, .22);
+    transform: translateY(-2px);
+}
+
+.footer-map-frame {
+    min-height: 300px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 178, 106, .28);
+    border-radius: 8px;
+    box-shadow: 0 24px 55px rgba(0, 0, 0, .22);
+}
+
+.footer-map-frame iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+    display: block;
+    filter: saturate(.92) contrast(.96);
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(212, 178, 106, .25);
     width: min(1200px, 90%);
@@ -156,6 +235,21 @@
     .footer-bottom {
         justify-content: center;
     }
+
+    .footer-map {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding: 0 16px 48px;
+    }
+
+    .footer-map-info {
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-map-info p {
+        max-width: 560px;
+    }
 }
 
 /* Mobile */
@@ -194,8 +288,31 @@
         font-size: clamp(12px, 2.2vw, 14px);
     }
 
+    .footer-contato div {
+        align-items: flex-start;
+    }
+
     .icons {
         justify-content: center;
+    }
+
+    .footer-map {
+        padding: 0 12px 38px;
+    }
+
+    .footer-map-info {
+        padding-top: 24px;
+    }
+
+    .footer-map-button {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .footer-map-frame,
+    .footer-map-frame iframe {
+        min-height: 260px;
     }
 
     .footer-bottom {
@@ -226,6 +343,11 @@
         min-width: 44px;
         min-height: 44px;
         font-size: 18px;
+    }
+
+    .footer-map-frame,
+    .footer-map-frame iframe {
+        min-height: 230px;
     }
 
     .footer-bottom {
